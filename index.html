@@ -1,2 +1,99 @@
 <h1>아아아아아왜안돼</h1>
 <p>이렇게하면되나</p>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>making cards</title>
+
+    <style>
+        
+        .flex-container{
+            margin-top: 80px;
+            display: flex;
+            gap: 10px;
+            justify-content: center;  /* 가로 중앙 정렬 */
+            align-items: center;      /* 세로 중앙 정렬 */
+        }
+        .card-container{
+            width: 300px;
+            height: 375px;
+            border-radius: 10px;
+            background-color: blue;
+            overflow: hidden; /* 이러면 나간 것들은 잘림 */
+            box-shadow: 0px 20px 25px rgba(0, 0, 0, 0.244);
+            position: relative; 
+            /* 이래야 absolute가 부모로 인식함 */
+            transition: all;
+            transition-duration: 0.1s;
+        }
+        .card-container:hover{
+            transform: scale(0.9);
+        }
+        .img-gradient{
+            background: rgb(238,223,195);
+            background: linear-gradient(15deg, rgba(50, 42, 25, 0.76) 0%, rgba(240, 171, 157, 0) 100%);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300px;
+            height: 375px;
+            /* width: 100%;
+            height: 100%; */
+        }
+        .text-wrap{
+            position: absolute;
+            top: 190px;
+            color: white;
+            padding: 20px;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+        #title{
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            font-size: x-large;
+        }
+        .bebas-neue-regular {
+        font-family: "Bebas Neue", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="title" class="bebas-neue-regular">studio Ghibri</h1>
+    <div class="flex-container">
+        <a  target='_blank' href="https://ko.wikipedia.org/wiki/%EC%9D%B4%EC%9B%83%EC%A7%91_%ED%86%A0%ED%86%A0%EB%A1%9C">
+            <div class="card-container">
+                <div class="img-gradient"></div>
+                <img src="../asset/card 1 (1).png" alt="샘플이미지1번">
+                <div class="text-wrap">
+                    <h1>이웃집 토토로</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ducimus enim, cumque accusamus</p>
+                </div>          
+            </div>
+        </a>
+        
+        <a target="_blank" href="https://ko.wikipedia.org/wiki/%ED%95%98%EC%9A%B8%EC%9D%98_%EC%9B%80%EC%A7%81%EC%9D%B4%EB%8A%94_%EC%84%B1_(%EC%98%81%ED%99%94)">
+            <div class="card-container">
+                <div class="img-gradient"></div>
+                <img src="../asset/card 2 (1).png" alt="샘플이미지2번">
+                <div class="text-wrap">
+                    <h1 style="font-size: 28px;">하울의 움직이는 성</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ducimus enim, cumque accusamus</p>
+                </div>          
+            </div>
+        </a>
+        
+        <div class="card-container">
+            <div class="img-gradient"></div>
+            <img src="../asset/card 3.png" alt="샘플이미지2번">
+            <div class="text-wrap">
+                <h1>벼랑 위의 포뇨</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam ducimus enim, cumque accusamus</p>
+            </div>          
+        </div>
+    </div>
+
+</body>
